@@ -1,14 +1,14 @@
 const board = document.querySelector('#board')
-const colors = ['#FF0000', '#FA8072' , '#FF69B4', '#FF8C00','#F0E68C', '#9370DB' , '	#0000CD' , '	#C0C0C0' , '#2F4F4F' , '	#FFFF00' , '	#00FFFF', '	#D2691E', '#228B22', '	#00FF00']
+const colors = ['#FF0000', '#FA8072', '#FF69B4', '#FF8C00', '#F0E68C', '#9370DB', '	#0000CD', '	#C0C0C0', '#2F4F4F', '	#FFFF00', '	#00FFFF', '	#D2691E', '#228B22', '	#00FF00']
 const SQUARES_NUMBER = 910
 
 for (let i = 0; i < SQUARES_NUMBER; i++) {
     const square = document.createElement('div')
     square.classList.add('square')
 
-    square.addEventListener('mouseover', () => setColor(square) )
+    square.addEventListener('mouseover', () => setColor(square))
 
-    square.addEventListener('mouseleave', () => removeColor(square) )
+    square.addEventListener('mouseleave', () => removeColor(square))
 
 
     board.append(square)
@@ -16,7 +16,7 @@ for (let i = 0; i < SQUARES_NUMBER; i++) {
 
 function setColor(element) {
     const color = getRandomColor()
-    element.style.backgroundColor =  color
+    element.style.backgroundColor = color
     element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`
 }
 
